@@ -25,4 +25,4 @@ jobs:
             echo "CRON_URL secret is not set."
             exit 1
           fi
-          curl -sS --max-time 90 -w "\nHTTP:%{http_code}\n" "$CRON_URL"
+          curl -sS --max-time 90 -o /dev/null -w "HTTP:%{http_code}\n" "$CRON_URL"
